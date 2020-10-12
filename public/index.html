@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room | Home</title>
+
+    <link rel="stylesheet" type="text/css" href="public/styles.css">
+    <script src="../../socket.io/socket.io.js"></script>
+
+    <script src="https://kit.fontawesome.com/e2deaac5f0.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="startScreen" id="centered">
+        <div class="inputs">
+            <form action="/" method="POST" id="playForm">
+                <label class="label-text">Username</label>
+                <label class="label-text question floatRight">
+                    <i class="fas fa-question-circle"></i>
+                    <div class="tooltip-text tooltip-text-top">
+                        Leaving the 'Username' field empty will create a random name for you.
+                    </div>
+                </label>
+                <input id="usernameField" class="inputField" autocapitalize="false" autocomplete="off" spellcheck="false" maxlength="16">
+                <label class="label-text">Room Code</label>
+                <label class="label-text question floatRight">
+                    <i class="fas fa-question-circle"></i>
+                    <div class="tooltip-text tooltip-text-bottom">
+                        Leaving the 'Room Code' field empty will create a private custom match with a unique Room Code.
+                    </div>
+                </label>
+                <input id="roomCodeField" class="inputField" autocapitalize="false" autocomplete="off" spellcheck="false" maxlength="5">
+                <button id="chatButton">Chat!</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="mainChat">
+        <div class="chat">
+            <div class="usersConnected">
+                Room <span class="bold roomCode">{code}</span>
+
+                <!--<a class="state-button chevron"><i name='chevron' class="fas fa-chevron-down"></i></a>-->
+
+                <div class="userList">
+                    <span class="bold userNum"></span>
+                    <span class="userNames"></span>
+                </div>
+            </div>
+            <div class="chatWindow">
+                <div id="messages" class="chatContent"></div>
+            </div>
+            <div class="chatInput">
+                <form action="/" method="POST" id="chatForm">
+                    <input id="chatText" autocomplete="off" placeholder="Type your message here...">
+                    <button id="chatSend">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/client.js"></script>
+</body>
+</html>
