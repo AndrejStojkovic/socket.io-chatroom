@@ -30,11 +30,9 @@ node .
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Andrej Stojkovic – [@100_jko](https://twitter.com/100_jko) – andrejstojkovic03@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/AndrejStojkovic](https://github.com/AndrejStojkovic)
 
 ## Contributing
 
